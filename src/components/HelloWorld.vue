@@ -29,8 +29,8 @@
     signInWithPopup(auth, providerGitHub)
   .then((result) => {
       isSigneIn.value = !isSigneIn.value;
-      //user.value = result.user.displayName;
-      console.log(result);
+      user.value = result.user.email;
+      console.log(result.user.email);
     // const credential = GithubAuthProvider.credentialFromResult(result);
     // const token = credential.accessToken;
     //const user = result.user;
