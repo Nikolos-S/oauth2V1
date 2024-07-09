@@ -11,6 +11,15 @@
   const user = ref('');
   const isSigneIn = ref(false);
 
+  const handleTest = async () => {
+    try {
+      const response = await fetch('https://webapp.avtovokzal.ru/avs7barntestapi/api/me');
+      console.log(response.text());
+    } catch(e) {
+      console.log(e);
+    }
+  };
+
   const handleSignInGoogle = () => {
     signInWithPopup(auth, providerGoogle)
     .then((result) => {
@@ -65,6 +74,10 @@
     <div id="GitHubSignIn" v-if="!isSigneIn">
       <h3> Вход через Гит Хаб</h3>
       <button @click="handleSignInGitHub">Вход</button>
+    </div>
+    <div id="GitHubSignIn" v-if="!isSigneIn">
+      <h3>Тестовый вход</h3>
+      <button @click="handleTest">Вход</button>
     </div>
   </div>
 </template>

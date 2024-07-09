@@ -6,7 +6,7 @@ const firebaseConfig = {
     projectId: "oauth2v1-frontend",
     storageBucket: "oauth2v1-frontend.appspot.com",
     messagingSenderId: "185634663165",
-    appId: "1:185634663165:web:4ed591588d9ea3c3aeec94"
+    appId: "1:185634663165:web:4ed591588d9ea3c3aeec94",
    };
 
 const firebaseApp = initializeApp(firebaseConfig);
